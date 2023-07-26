@@ -1,0 +1,56 @@
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    box-sizing: border-box;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=874&q=80) no-repeat center;
+    background-size: cover;
+}
+
+.glass {
+    width: 450px;
+    min-height: 250px;
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    background: linear-gradient(100deg, rgb(0, 0, 0, .2), rgb(0, 0, 0, .2));
+    box-shadow: 0 10px 26px 0 rgb(0, 0, 0, .50);
+}
+
+.intro__text {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 2em 1em;
+    color: #fd0a0a;
+}
+</style>
+
+<body>
+    <div class="intro">
+        <div class="glass">
+            
+
+            <div class="intro__text">
+                <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif">Inner Column: {{ squareres.inner_dim }}</h1>
+                <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif">Outer Column : {{squareres.outer_dim }}</h1>
+                <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif">Corner Column: {{ squareres.corner_dim }}</h3>
+                <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif">Beam Dimension: {{ squareres.beam_dim }}</h1>
+                <div class="d-grid gap-2 ">
+                    <a href="{% url 'index' %}" class="themesflat-button bg-accent big">
+        
+                    <button class="btn btn-primary" type="submit" id="submit">Back</button>
+                </a>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</body>
